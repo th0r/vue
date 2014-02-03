@@ -80,7 +80,8 @@
 
         <!-- for PhantomJS/CasperJS testing only -->
         <script>
-            if (navigator.userAgent.indexOf('PhantomJS') > -1) {
+            if (navigator.userAgent.indexOf('PhantomJS') > -1 ||
+                location.search.indexOf('test=1') > -1) {
                 localStorage.clear()
             }
         </script>
