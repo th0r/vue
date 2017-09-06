@@ -4608,6 +4608,11 @@ function initGlobalAPI (Vue) {
     defineReactive: defineReactive$$1
   };
 
+  Vue.internals = {
+    Dep: Dep,
+    Watcher: Watcher
+  };
+
   Vue.set = set;
   Vue.delete = del;
   Vue.nextTick = nextTick;
