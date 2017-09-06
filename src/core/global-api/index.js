@@ -17,6 +17,9 @@ import {
   defineReactive
 } from '../util/index'
 
+import Dep from '../observer/dep'
+import Watcher from '../observer/watcher'
+
 export function initGlobalAPI (Vue: GlobalAPI) {
   // config
   const configDef = {}
@@ -38,6 +41,11 @@ export function initGlobalAPI (Vue: GlobalAPI) {
     extend,
     mergeOptions,
     defineReactive
+  }
+
+  Vue.internals = {
+    Dep,
+    Watcher
   }
 
   Vue.set = set
